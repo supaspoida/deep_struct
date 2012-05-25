@@ -16,6 +16,7 @@ class DeepStruct::Array < Array
       block.call(DeepStruct.convert_element_if_possible(e))
     end
   end
+  alias map each
 
   def sample(*args)
     DeepStruct.convert_element_if_possible(super)
